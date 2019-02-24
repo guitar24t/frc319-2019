@@ -29,7 +29,7 @@ public class Carriage extends Subsystem {
   DigitalInput digitalCargoSensor = new DigitalInput(0);
   CANifier canifier = new CANifier(0);
 
-  private boolean isBeakOpen = true;
+  private boolean isFingerOpen = true;
 
   private final double safePosition = 0.0;
 
@@ -52,12 +52,12 @@ public class Carriage extends Subsystem {
   public void initDefaultCommand() {
   }
 
-  public boolean isBeakOpen() {
-    return isBeakOpen;
+  public boolean isFingerOpen() {
+    return isFingerOpen;
   }
 
-  public void setIsBeakOpen(boolean isBeakOpen) {
-    this.isBeakOpen = isBeakOpen;
+  public void setIsFingerOpen(boolean isFingerOpen) {
+    this.isFingerOpen = isFingerOpen;
   }
 
   public double isCarraigeSafe(int newTargetPosition) {
